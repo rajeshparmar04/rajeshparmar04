@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Equity Valuation Report — TATA STEEL LIMITED</title>
+<style>
+  /* ===== RESET & BASE ===== */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { font-size: 11pt; }
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1a1a1a;
+    background: #f0f4f8;
+    line-height: 1.6;
+  }
+
+  /* ===== PAGE WRAPPER ===== */
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 20px auto;
+    background: #ffffff;
+    box-shadow: 0 4px 24px rgba(26,60,110,0.15);
+    padding: 20mm 18mm 22mm 18mm;
+    position: relative;
+  }
+
+  /* ===== COVER PAGE ===== */
+  .cover-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 257mm;
+    text-align: center;
+    background: linear-gradient(160deg, #1A3C6E 0%, #2a5298 60%, #1A3C6E 100%);
+    color: #ffffff;
+    border-radius: 4px;
+    padding: 40px 30px;
+    position: relative;
+    overflow: hidden;
+  }
+  .cover-page::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 260px; height: 260px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.05);
+  }
+  .cover-page::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; left: -80px;
+    width: 350px; height: 350px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.04);
+  }
+  .cover-logo-placeholder {
+    width: 100px; height: 100px;
+    border: 4px solid rgba(255,255,255,0.5);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13pt;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 28px;
+    background: rgba(255,255,255,0.12);
+    color: #ffffff;
+    position: relative;
+    z-index: 1;
+  }
+  .cover-title {
+    font-size: 24pt;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+    line-height: 1.2;
+    position: relative;
+    z-index: 1;
+  }
+  .cover-subtitle {
+    font-size: 15pt;
+    font-weight: 600;
+    margin-bottom: 24px;
+    opacity: 0.9;
+    position: relative;
+    z-index: 1;
+  }
+  .cover-divider {
+    width: 80px; height: 3px;
+    background: rgba(255,255,255,0.6);
+    margin: 20px auto;
+    position: relative;
+    z-index: 1;
+  }
+  .cover-meta {
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 6px;
+    padding: 20px 28px;
+    background: rgba(255,255,255,0.08);
+    position: relative;
+    z-index: 1;
+    margin-top: 8px;
+  }
+  .cover-meta table { width: 100%; border-collapse: collapse; }
+  .cover-meta td {
+    padding: 6px 8px;
+    font-size: 10pt;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+  }
+  .cover-meta td:first-child { font-weight: 600; text-align: left; width: 45%; opacity: 0.8; }
+  .cover-meta td:last-child { text-align: left; }
+  .cover-meta tr:last-child td { border-bottom: none; }
+  .cover-badges {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+  }
+  .cover-badge {
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.35);
+    border-radius: 20px;
+    padding: 5px 14px;
+    font-size: 9pt;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+  .cover-footer-note {
+    position: absolute;
+    bottom: 22px;
+    font-size: 8pt;
+    opacity: 0.55;
+    z-index: 1;
+  }
+
+  /* ===== PAGE HEADER ===== */
+  .page-header {
+    border-bottom: 2px solid #1A3C6E;
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .page-header .header-title {
+    font-size: 9pt;
+    color: #1A3C6E;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+  .page-header .header-right {
+    font-size: 8pt;
+    color: #666;
+    text-align: right;
+  }
+
+  /* ===== PAGE FOOTER ===== */
+  .page-footer {
+    border-top: 1px solid #c8d4e8;
+    margin-top: 24px;
+    padding-top: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 8pt;
+    color: #888;
+  }
+  .page-footer .confidential {
+    color: #b83c3c;
+    font-weight: 700;
+    font-size: 7.5pt;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+  }
+
+  /* ===== TYPOGRAPHY ===== */
+  h1 {
+    font-size: 18pt;
+    color: #1A3C6E;
+    margin-bottom: 14px;
+    border-bottom: 3px solid #1A3C6E;
+    padding-bottom: 8px;
+    letter-spacing: 0.5px;
+  }
+  h2 {
+    font-size: 14pt;
+    color: #1A3C6E;
+    margin-top: 28px;
+    margin-bottom: 12px;
+    border-left: 5px solid #1A3C6E;
+    padding-left: 12px;
+  }
+  h3 {
+    font-size: 12pt;
+    color: #2a5298;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+  h4 {
+    font-size: 11pt;
+    color: #1A3C6E;
+    margin-top: 16px;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+  p { margin-bottom: 10px; }
+
+  /* ===== TABLES ===== */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0;
+    font-size: 9.5pt;
+  }
+  th {
+    background: #1A3C6E;
+    color: #ffffff;
+    font-weight: 700;
+    padding: 8px 10px;
+    text-align: left;
+    letter-spacing: 0.3px;
+    border: 1px solid #1A3C6E;
+  }
+  td {
+    padding: 7px 10px;
+    border: 1px solid #d0dce8;
+    vertical-align: top;
+  }
+  tr:nth-child(even) td { background: #eef3fa; }
+  tr:nth-child(odd) td { background: #ffffff; }
+  tr:hover td { background: #dde8f7; }
+  td strong, td b { color: #1A3C6E; }
+
+  /* ===== HIGHLIGHTED BOXES ===== */
+  .highlight-box {
+    background: linear-gradient(135deg, #eef3fa 0%, #dde8f7 100%);
+    border-left: 5px solid #1A3C6E;
+    border-radius: 0 6px 6px 0;
+    padding: 14px 18px;
+    margin: 16px 0;
+  }
+  .highlight-box .label { font-size: 9pt; color: #666; text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 4px; }
+  .highlight-box .value { font-size: 20pt; font-weight: 700; color: #1A3C6E; }
+  .highlight-box .sub { font-size: 9pt; color: #555; margin-top: 2px; }
+
+  .recommendation-box {
+    background: linear-gradient(135deg, #1A3C6E 0%, #2a5298 100%);
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 18px 22px;
+    margin: 18px 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .recommendation-box .rec-label { font-size: 9pt; opacity: 0.8; letter-spacing: 1px; text-transform: uppercase; }
+  .recommendation-box .rec-value { font-size: 22pt; font-weight: 700; letter-spacing: 1px; }
+  .recommendation-box .rec-price { font-size: 11pt; margin-top: 4px; opacity: 0.9; }
+  .recommendation-box .rec-divider { width: 1px; height: 60px; background: rgba(255,255,255,0.3); flex-shrink: 0; }
+
+  .info-box {
+    background: #fff8e1;
+    border-left: 4px solid #f9a825;
+    border-radius: 0 4px 4px 0;
+    padding: 10px 14px;
+    margin: 12px 0;
+    font-size: 9.5pt;
+    color: #555;
+  }
+  .info-box strong { color: #e65100; }
+
+  .formula-box {
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin: 12px 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 9.5pt;
+    color: #333;
+    line-height: 1.8;
+  }
+
+  /* ===== TABLE OF CONTENTS ===== */
+  .toc { margin: 18px 0; }
+  .toc-item {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    padding: 5px 0;
+    border-bottom: 1px dotted #c8d4e8;
+    text-decoration: none;
+    color: #1A3C6E;
+    font-size: 10.5pt;
+    transition: background 0.15s;
+  }
+  .toc-item:hover { background: #eef3fa; padding-left: 6px; }
+  .toc-num { font-weight: 700; min-width: 22px; flex-shrink: 0; }
+  .toc-dots { flex: 1; border-bottom: 1px dotted #b0c0d4; margin: 0 6px; position: relative; top: -3px; }
+
+  /* ===== FOOTBALL FIELD ===== */
+  .football-field { margin: 18px 0; }
+  .ff-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    gap: 10px;
+  }
+  .ff-label { min-width: 140px; font-size: 9pt; font-weight: 600; color: #333; flex-shrink: 0; }
+  .ff-chart-area { flex: 1; position: relative; height: 28px; background: #f0f4f8; border-radius: 4px; overflow: visible; }
+  .ff-bar {
+    position: absolute;
+    top: 5px; height: 18px;
+    border-radius: 3px;
+    display: flex; align-items: center;
+    padding: 0 6px;
+    font-size: 8pt; font-weight: 700; color: #fff;
+    white-space: nowrap;
+    transition: all 0.3s;
+  }
+  .ff-cmp-line {
+    position: absolute;
+    top: -2px; width: 2px; height: 32px;
+    background: #e53935;
+    border-radius: 1px;
+    z-index: 5;
+  }
+  .ff-cmp-label {
+    position: absolute;
+    top: -16px; font-size: 7.5pt; color: #e53935; font-weight: 700;
+    transform: translateX(-50%);
+  }
+  .ff-scale {
+    display: flex;
+    margin-left: 150px;
+    gap: 0;
+    font-size: 7.5pt;
+    color: #888;
+    margin-top: 4px;
+  }
+  .ff-scale-item { flex: 1; text-align: center; }
+  .ff-legend {
+    display: flex; gap: 18px; margin-top: 14px; flex-wrap: wrap; font-size: 9pt;
+  }
+  .ff-legend-item { display: flex; align-items: center; gap: 6px; }
+  .ff-legend-color { width: 20px; height: 10px; border-radius: 2px; }
+
+  /* ===== DUPONT BOX ===== */
+  .dupont-box {
+    background: #eef3fa;
+    border: 2px solid #1A3C6E;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 14px 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 9.5pt;
+    line-height: 2.0;
+    color: #1A3C6E;
+  }
+
+  /* ===== UTILITIES ===== */
+  .green { color: #2e7d32; font-weight: 700; }
+  .red { color: #c62828; font-weight: 700; }
+  .blue { color: #1A3C6E; font-weight: 700; }
+  .muted { color: #666; font-size: 9pt; }
+  ul { padding-left: 22px; margin-bottom: 10px; }
+  ul li { margin-bottom: 4px; }
+  .two-col { display: flex; gap: 20px; }
+  .two-col > div { flex: 1; }
+  .section-intro { color: #444; margin-bottom: 14px; font-size: 10pt; }
+  .verdict-banner {
+    background: linear-gradient(90deg, #1A3C6E 0%, #2a5298 100%);
+    color: #ffffff;
+    border-radius: 6px;
+    padding: 12px 20px;
+    margin: 14px 0;
+    font-size: 10.5pt;
+    line-height: 1.6;
+  }
+  .verdict-banner strong { font-size: 11pt; }
+
+  /* ===== PRINT STYLES ===== */
+  @media print {
+    body { background: #ffffff; font-size: 10pt; }
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0;
+      padding: 18mm 15mm 20mm 15mm;
+      box-shadow: none;
+      page-break-after: always;
+    }
+    .print-page-break { page-break-before: always; }
+    .cover-page { min-height: 257mm; }
+    h1, h2 { page-break-after: avoid; }
+    table { page-break-inside: avoid; }
+    tr { page-break-inside: avoid; }
+    .football-field { page-break-inside: avoid; }
+    .highlight-box, .recommendation-box { page-break-inside: avoid; }
+
+    /* Running header/footer via @page */
+    @page {
+      size: A4;
+      margin: 18mm 15mm 22mm 15mm;
+      @top-left { content: "Equity Valuation Report — TATA STEEL LIMITED"; font-size: 8pt; color: #1A3C6E; }
+      @bottom-center { content: "CONFIDENTIAL — For Academic Use Only | Page " counter(page); font-size: 8pt; color: #888; }
+    }
+    @page :first { @top-left { content: ""; } @bottom-center { content: ""; } }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     COVER PAGE
+     ============================================================ -->
+<div class="page">
+  <div class="cover-page">
+    <div class="cover-logo-placeholder">TATA<br>STEEL</div>
+    <div class="cover-title">Equity Valuation Report</div>
+    <div class="cover-subtitle">TATA STEEL LIMITED</div>
+    <div class="cover-badges">
+      <span class="cover-badge">NSE: TATASTEEL</span>
+      <span class="cover-badge">BSE: 500470</span>
+      <span class="cover-badge">ISIN: INE081A01020</span>
+    </div>
+    <div class="cover-divider"></div>
+    <div class="cover-meta">
+      <table>
+        <tr><td>Report Date</td><td>March 9, 2026</td></tr>
+        <tr><td>Prepared By</td><td>Rajesh Parmar</td></tr>
+        <tr><td>Designation</td><td>Final Year MBA Candidate</td></tr>
+        <tr><td>Purpose</td><td>Academic Equity Valuation for Investment Decision-Making</td></tr>
+        <tr><td>CMP (Mar 6, 2026)</td><td>₹198.46 | NSE</td></tr>
+        <tr><td>Recommendation</td><td>BUY / ACCUMULATE</td></tr>
+        <tr><td>Target Price</td><td>₹215 – ₹230 (12-month)</td></tr>
+      </table>
+    </div>
+    <div class="cover-footer-note">CONFIDENTIAL — For Academic Use Only | Not Investment Advice</div>
+  </div>
+</div>
+
+<!-- ============================================================
+     TABLE OF CONTENTS
+     ============================================================ -->
+<div class="page print-page-break">
+  <div class="page-header">
+    <span class="header-title">EQUITY VALUATION REPORT — TATA STEEL LIMITED</span>
+    <span class="header-right">March 9, 2026 | Rajesh Parmar</span>
+  </div>
+
+  <h1>Table of Contents</h1>
+  <div class="toc">
+    <a class="toc-item" href="#sec1"><span class="toc-num">1.</span><span>Executive Summary</span><span class="toc-dots"></span></a>
+    <a class="toc-item" href="#sec2"><span class="toc-num">2.</span><span>Company Overview</span><span class="toc-dots"></span></a>
+    <a class="toc-item" href="#sec3"><span class="toc-num">3.</span><span>Industry &amp; Macro Analysis</span><span class="toc-dots"></span></a>
+    <a class="toc-item" href="#sec3-1" style="padding-left:18px;font-size:9.5pt"><span class="toc-num">3.1</span><span>India Steel Sector Outlook</span><span class="toc-dots"></span></a>
+    <a class="toc-item" href="#sec3-2" style="padding-left:18px;font-size:9.5pt"><span class="toc-num">3.2</span><span>Porter's Five Forces</span><span class="toc-dots"></span></a>
+    <a class="toc-item" href="#sec3-3" style="padding-left:18px;font-size:9.5pt"><span class="toc-num">3.3</span><span>SWOT Analysis</span><span class="toc-dots"></span></a>
+    <a class="toc-item" href="#sec4"><span class="toc-num">4.</span><span>Historical Financial Analysis</span><span class="toc-dots"></span></a>
+    <a class="toc-item" href="#sec5"><span class="toc-num">5.</span><span>Assumptions &amp; Forecasting</span><span class="toc-dots"></span></a>
+    <a class="toc-item" href="#sec6"><span class="toc-num">6.</span><span>Valuation Methodologies</span><span class="toc-dots"></span></a>
+    <a class="toc-item" href="#sec6a" style="padding-left:18px;font-size:9.5pt"><span class="toc-num">6A.</span><span>DCF — FCFF Model</span><span class="toc-dots"></span></a>
+    <a class="toc-item" href="#sec6b" style="padding-left:18px;font-size:9.5pt"><span class="toc-num">6B.</span><span>Relative Valuation (EV/EBITDA Comps)</span><span class="toc-dots"></span></a>
+    <a class="toc-item" href="#sec6c" style="padding-left:18px;font-size:9.5pt"><span class="toc-num">6C.</span><span>Dividend Discount Model (DDM)</span><span class="toc-dots"></span></a>
+    <a class="toc-item" href="#sec6d" style="padding-left:18px;font-size:9.5pt"><span class="toc-num">6D.</span><span>Asset-Based / Book Value Approach</span><span class="toc-dots"></span></a>
+    <a class="toc-item" href="#sec7"><span class="toc-num">7.</span><span>Sensitivity Analysis</span><span class="toc-dots"></span></a>
+    <a class="toc-item" href="#sec8"><span class="toc-num">8.</span><span>Football Field Chart — Valuation Range Summary</span><span class="toc-dots"></span></a>
+    <a class="toc-item" href="#sec9"><span class="toc-num">9.</span><span>Risk Factors</span><span class="toc-dots"></span></a>
+    <a class="toc-item" href="#sec10"><span class="toc-num">10.</span><span>Final Recommendation</span><span class="toc-dots"></span></a>
+    <a class="toc-item" href="#sec11"><span class="toc-num">11.</span><span>Appendices &amp; Sources</span><span class="toc-dots"></span></a>
+  </div>
+
+  <div class="page-footer">
+    <span>Tata Steel Limited — Equity Valuation Report | Academic Use Only</span>
+    <span class="confidential">Confidential — For Academic Use Only</span>
+    <span>March 9, 2026</span>
+  </div>
+</div>
+
+<!-- ============================================================
+     SECTION 1: EXECUTIVE SUMMARY
+     ============================================================ -->
+<div class="page print-page-break" id="sec1">
+  <div class="page-header">
+    <span class="header-title">EQUITY VALUATION REPORT — TATA STEEL LIMITED</span>
+    <span class="header-right">Section 1: Executive Summary</span>
+  </div>
+
+  <h1>1. Executive Summary</h1>
+
+  <div class="two-col">
+    <div class="highlight-box">
+      <div class="label">DCF Fair Value (Base Case)</div>
+      <div class="value">₹213.50</div>
+      <div class="sub">per share</div>
+    </div>
+    <div class="highlight-box">
+      <div class="label">Current Market Price (CMP)</div>
+      <div class="value">₹198.46</div>
+      <div class="sub">NSE, March 6, 2026</div>
+    </div>
+  </div>
+
+  <div class="recommendation-box">
+    <div>
+      <div class="rec-label">Investment Recommendation</div>
+      <div class="rec-value">BUY / ACCUMULATE</div>
+      <div class="rec-price">Target Price: ₹215 – ₹230 &nbsp;|&nbsp; Upside: ~8–16%</div>
+    </div>
+    <div class="rec-divider"></div>
+    <div>
+      <div class="rec-label">Horizon</div>
+      <div style="font-size:13pt;font-weight:700;margin-top:4px;">12–18 Months</div>
+      <div class="rec-price" style="font-size:9pt;">Risk-Reward: ~1:1.5 (Favorable)</div>
+    </div>
+  </div>
+
+  <table>
+    <thead><tr><th>Parameter</th><th>Value</th></tr></thead>
+    <tbody>
+      <tr><td>Current Market Price (CMP)</td><td><strong>₹198.46</strong> (NSE, Mar 6, 2026)</td></tr>
+      <tr><td>Market Capitalization</td><td>₹2.48 Lakh Crore (~$29.5 Bn)</td></tr>
+      <tr><td>Shares Outstanding</td><td>12,480 Mn (1,248 Crore)</td></tr>
+      <tr><td>52-Week Range</td><td>₹122 – ₹210 (approx.)</td></tr>
+      <tr><td>DCF Fair Value (Base Case)</td><td><strong>₹213.50</strong> per share</td></tr>
+      <tr><td>Relative Valuation (EV/EBITDA)</td><td>₹195 – ₹230 per share</td></tr>
+      <tr><td>Recommendation</td><td><strong>BUY / ACCUMULATE</strong></td></tr>
+      <tr><td>Upside Potential</td><td class="green">~8–16%</td></tr>
+    </tbody>
+  </table>
+
+  <div class="verdict-banner">
+    <strong>Analyst Verdict:</strong> Tata Steel is fairly valued to marginally undervalued at ₹198. The stock offers <strong>~8–16% upside potential</strong> over a 12–18 month horizon under base case assumptions. The company is emerging from an earnings trough (FY24), with improving EBITDA margins, a clear deleveraging trajectory, and strong India demand tailwinds.
+  </div>
+
+  <div class="page-footer">
+    <span>Tata Steel Limited — Equity Valuation Report | Academic Use Only</span>
+    <span class="confidential">Confidential — For Academic Use Only</span>
+    <span>March 9, 2026</span>
+  </div>
+</div>
+
+<!-- ============================================================
+     SECTION 2: COMPANY OVERVIEW
+     ============================================================ -->
+<div class="page print-page-break" id="sec2">
+  <div class="page-header">
+    <span class="header-title">EQUITY VALUATION REPORT — TATA STEEL LIMITED</span>
+    <span class="header-right">Section 2: Company Overview</span>
+  </div>
+
+  <h1>2. Company Overview</h1>
+
+  <table>
+    <thead><tr><th>Detail</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>Founded</td><td>1907 (Jamshedpur, India)</td></tr>
+      <tr><td>Promoter Group</td><td>Tata Group (~33.2% holding)</td></tr>
+      <tr><td>Headquarters</td><td>Mumbai, India</td></tr>
+      <tr><td>Global Capacity</td><td>~35 MTPA (India ~21 MTPA + Europe ~11 MTPA + SE Asia ~3 MTPA)</td></tr>
+      <tr><td>Employees</td><td>~77,000 worldwide</td></tr>
+      <tr><td>Key Subsidiaries</td><td>Tata Steel Europe (ex-Corus), Tata Steel Long Products, Neelachal Ispat, TRF Ltd, Tinplate Company</td></tr>
+      <tr><td>Key Products</td><td>Flat Products (HRC, CRC, Coated), Long Products (Rebars, Wire Rods), Tubes, Tinplate</td></tr>
+      <tr><td>Revenue Mix</td><td>India ~65%, Europe ~30%, Others ~5%</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Competitive Moat</h3>
+  <ul>
+    <li><strong>Lowest-cost steel producer globally</strong> (Jamshedpur &amp; Kalinganagar)</li>
+    <li><strong>Captive raw material</strong> — iron ore ~100% self-sufficient in India</li>
+    <li><strong>India infrastructure super-cycle</strong> beneficiary</li>
+    <li><strong>Leader in green steel initiatives</strong></li>
+    <li><strong>Tata Group governance premium</strong> — trusted brand, strong management</li>
+  </ul>
+
+  <div class="page-footer">
+    <span>Tata Steel Limited — Equity Valuation Report | Academic Use Only</span>
+    <span class="confidential">Confidential — For Academic Use Only</span>
+    <span>March 9, 2026</span>
+  </div>
+</div>
+
+<!-- ============================================================
+     SECTION 3: INDUSTRY & MACRO ANALYSIS
+     ============================================================ -->
+<div class="page print-page-break" id="sec3">
+  <div class="page-header">
+    <span class="header-title">EQUITY VALUATION REPORT — TATA STEEL LIMITED</span>
+    <span class="header-right">Section 3: Industry &amp; Macro Analysis</span>
+  </div>
+
+  <h1>3. Industry &amp; Macro Analysis</h1>
+
+  <h2 id="sec3-1">3.1 India Steel Sector Outlook</h2>
+
+  <table>
+    <thead><tr><th>Metric</th><th>FY2026E</th><th>FY2027E</th></tr></thead>
+    <tbody>
+      <tr><td>Demand Growth</td><td>8–9%</td><td>9–10%</td></tr>
+      <tr><td>Capacity Additions</td><td>+10 MT</td><td>+10 MT</td></tr>
+      <tr><td>Total Installed Capacity</td><td>~195 MT</td><td>~210 MT</td></tr>
+      <tr><td>Per-Capita Steel Consumption</td><td>~95 kg</td><td>~103 kg</td></tr>
+      <tr><td>Global Average Per Capita</td><td>~230 kg</td><td>—</td></tr>
+    </tbody>
+  </table>
+
+  <p><strong>Key Drivers:</strong> National Infrastructure Pipeline (₹111 Lakh Crore), PM Gati Shakti, Housing for All, PLI Schemes, Railway modernization, Green energy infrastructure.</p>
+  <p><strong>Headwinds:</strong> Chinese overcapacity &amp; dumping, volatile coking coal prices, global recessionary risks, currency fluctuations.</p>
+
+  <h2 id="sec3-2">3.2 Porter's Five Forces — Steel Industry</h2>
+
+  <table>
+    <thead><tr><th>Force</th><th>Intensity</th><th>Rationale</th></tr></thead>
+    <tbody>
+      <tr><td>Threat of New Entrants</td><td><span class="green">Low</span></td><td>Massive capital requirements, long gestation periods</td></tr>
+      <tr><td>Bargaining Power of Suppliers</td><td>Moderate</td><td>Coking coal imported; iron ore captive for Tata</td></tr>
+      <tr><td>Bargaining Power of Buyers</td><td>Moderate-High</td><td>Commodity product; buyers are price-sensitive</td></tr>
+      <tr><td>Threat of Substitutes</td><td><span class="green">Low</span></td><td>No viable substitute for structural steel</td></tr>
+      <tr><td>Competitive Rivalry</td><td><span class="red">High</span></td><td>JSW, SAIL, Jindal, ArcelorMittal competing aggressively</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="sec3-3">3.3 SWOT Analysis — Tata Steel</h2>
+
+  <div class="two-col">
+    <div>
+      <h4 style="color:#2e7d32;">&#9632; Strengths</h4>
+      <ul>
+        <li>Lowest-cost producer (India operations)</li>
+        <li>Captive iron ore mines</li>
+        <li>Strong brand (Tata Tiscon, Tata Steelium)</li>
+        <li>Integrated value chain</li>
+      </ul>
+      <h4 style="color:#e65100;margin-top:14px;">&#9632; Weaknesses</h4>
+      <ul>
+        <li>High debt (~₹95,000 Cr)</li>
+        <li>European ops are margin-dilutive</li>
+        <li>Cyclical business; earnings volatile</li>
+        <li>Exposure to coking coal imports</li>
+      </ul>
+    </div>
+    <div>
+      <h4 style="color:#1565c0;">&#9632; Opportunities</h4>
+      <ul>
+        <li>India capacity expansion (21→40 MTPA target)</li>
+        <li>Green steel / hydrogen-based steelmaking</li>
+        <li>European restructuring (Port Talbot transition)</li>
+        <li>Acquisitions (Neelachal, NINL integrated)</li>
+      </ul>
+      <h4 style="color:#c62828;margin-top:14px;">&#9632; Threats</h4>
+      <ul>
+        <li>Chinese steel dumping</li>
+        <li>Global recession risk</li>
+        <li>Regulatory / carbon taxes</li>
+        <li>Input cost inflation</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>Tata Steel Limited — Equity Valuation Report | Academic Use Only</span>
+    <span class="confidential">Confidential — For Academic Use Only</span>
+    <span>March 9, 2026</span>
+  </div>
+</div>
+
+<!-- ============================================================
+     SECTION 4: HISTORICAL FINANCIAL ANALYSIS
+     ============================================================ -->
+<div class="page print-page-break" id="sec4">
+  <div class="page-header">
+    <span class="header-title">EQUITY VALUATION REPORT — TATA STEEL LIMITED</span>
+    <span class="header-right">Section 4: Historical Financial Analysis</span>
+  </div>
+
+  <h1>4. Historical Financial Analysis</h1>
+
+  <h2>4.1 Consolidated Income Statement Summary (₹ Crore)</h2>
+  <table>
+    <thead><tr><th>Particulars</th><th>FY2021</th><th>FY2022</th><th>FY2023</th><th>FY2024</th><th>FY2025</th></tr></thead>
+    <tbody>
+      <tr><td>Revenue</td><td>1,56,477</td><td>2,43,959</td><td>2,32,834</td><td>2,29,171</td><td>2,18,543</td></tr>
+      <tr><td>EBITDA</td><td>42,994</td><td>63,830</td><td>34,978</td><td>23,456</td><td>25,802</td></tr>
+      <tr><td>EBITDA Margin</td><td>27.5%</td><td>26.2%</td><td>15.0%</td><td>10.2%</td><td>11.8%</td></tr>
+      <tr><td>Depreciation</td><td>9,234</td><td>9,101</td><td>9,335</td><td>9,882</td><td>10,421</td></tr>
+      <tr><td>EBIT</td><td>33,760</td><td>54,729</td><td>25,643</td><td>13,574</td><td>15,381</td></tr>
+      <tr><td>Interest Expense</td><td>7,800</td><td>6,500</td><td>6,200</td><td>7,100</td><td>6,800</td></tr>
+      <tr><td>Net Profit (PAT)</td><td>17,464</td><td>41,749</td><td>8,075</td><td><span class="red">(−4,910)</span></td><td>3,174</td></tr>
+      <tr><td>EPS (₹)</td><td>14.0</td><td>33.5</td><td>6.5</td><td><span class="red">(−3.9)</span></td><td>2.54</td></tr>
+    </tbody>
+  </table>
+
+  <h2>4.2 Cash Flow Summary (₹ Crore)</h2>
+  <table>
+    <thead><tr><th>Particulars</th><th>FY2021</th><th>FY2022</th><th>FY2023</th><th>FY2024</th><th>FY2025</th></tr></thead>
+    <tbody>
+      <tr><td>Operating Cash Flow</td><td>44,327</td><td>44,381</td><td>21,683</td><td>20,301</td><td>23,512</td></tr>
+      <tr><td>Capex</td><td>6,979</td><td>10,522</td><td>14,142</td><td>18,207</td><td>15,671</td></tr>
+      <tr><td><strong>Free Cash Flow</strong></td><td><strong>37,348</strong></td><td><strong>33,859</strong></td><td><strong>7,541</strong></td><td><strong>2,094</strong></td><td><strong>7,841</strong></td></tr>
+      <tr><td>FCF Margin</td><td>23.9%</td><td>13.9%</td><td>3.2%</td><td>0.9%</td><td>3.6%</td></tr>
+    </tbody>
+  </table>
+
+  <h2>4.3 Balance Sheet Snapshot (₹ Crore, Mar 31, 2025)</h2>
+  <div class="two-col">
+    <div>
+      <table>
+        <thead><tr><th>Asset / Item</th><th>Amount</th></tr></thead>
+        <tbody>
+          <tr><td>Total Assets</td><td>2,79,395</td></tr>
+          <tr><td>Non-Current Assets</td><td>2,11,003</td></tr>
+          <tr><td>Current Assets</td><td>68,392</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <table>
+        <thead><tr><th>Liability / Equity</th><th>Amount</th></tr></thead>
+        <tbody>
+          <tr><td>Total Equity</td><td>91,169</td></tr>
+          <tr><td>Total Debt</td><td>94,801</td></tr>
+          <tr><td><strong>Net Debt</strong></td><td><strong>82,579</strong></td></tr>
+          <tr><td>Current Liabilities</td><td>86,094</td></tr>
+          <tr><td>Non-Current Liabilities</td><td>1,01,948</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <h2>4.4 Key Financial Ratios</h2>
+  <table>
+    <thead><tr><th>Ratio</th><th>FY2023</th><th>FY2024</th><th>FY2025</th><th>Comment</th></tr></thead>
+    <tbody>
+      <tr><td>ROE</td><td>8.4%</td><td><span class="red">(−5.2%)</span></td><td>3.5%</td><td>Recovering</td></tr>
+      <tr><td>ROCE</td><td>12.1%</td><td>6.3%</td><td>8.2%</td><td>Improving</td></tr>
+      <tr><td>Debt/Equity</td><td>1.05x</td><td>1.08x</td><td>1.04x</td><td>Stable, elevated</td></tr>
+      <tr><td>Interest Coverage</td><td>4.1x</td><td>1.9x</td><td>3.1x</td><td>Adequate</td></tr>
+      <tr><td>Current Ratio</td><td>0.82</td><td>0.78</td><td>0.79</td><td>Below 1</td></tr>
+      <tr><td>Net Debt/EBITDA</td><td>2.4x</td><td>3.7x</td><td>3.2x</td><td>Improving</td></tr>
+      <tr><td>Dividend Yield</td><td>1.8%</td><td>0%</td><td>1.8%</td><td>Resumed</td></tr>
+      <tr><td>Book Value/Share</td><td>₹72.5</td><td>₹71.2</td><td>₹73.1</td><td>Slow growth</td></tr>
+    </tbody>
+  </table>
+
+  <h2>DuPont Analysis (FY2025)</h2>
+  <div class="dupont-box">
+    ROE  =  Net Profit Margin  ×  Asset Turnover  ×  Equity Multiplier<br>
+    &nbsp;&nbsp;&nbsp;&nbsp; =  (3,174 / 2,18,543)  ×  (2,18,543 / 2,79,395)  ×  (2,79,395 / 91,169)<br>
+    &nbsp;&nbsp;&nbsp;&nbsp; =  1.45%  ×  0.782x  ×  3.065x<br>
+    &nbsp;&nbsp;&nbsp;&nbsp; =  <strong>3.48% ROE</strong>
+  </div>
+  <p class="muted"><strong>Interpretation:</strong> Low margins are the biggest drag on ROE. High leverage (Equity Multiplier = 3.07x) amplifies returns but also risk. Asset turnover is decent for a capital-intensive industry.</p>
+
+  <div class="page-footer">
+    <span>Tata Steel Limited — Equity Valuation Report | Academic Use Only</span>
+    <span class="confidential">Confidential — For Academic Use Only</span>
+    <span>March 9, 2026</span>
+  </div>
+</div>
+
+<!-- ============================================================
+     SECTION 5: ASSUMPTIONS & FORECASTING
+     ============================================================ -->
+<div class="page print-page-break" id="sec5">
+  <div class="page-header">
+    <span class="header-title">EQUITY VALUATION REPORT — TATA STEEL LIMITED</span>
+    <span class="header-right">Section 5: Assumptions &amp; Forecasting</span>
+  </div>
+
+  <h1>5. Assumptions &amp; Forecasting</h1>
+
+  <h2>5.1 Key Assumptions</h2>
+  <table>
+    <thead><tr><th>Assumption</th><th>FY2026E</th><th>FY2027E</th><th>FY2028E</th><th>FY2029E</th><th>FY2030E</th><th>Rationale</th></tr></thead>
+    <tbody>
+      <tr><td>Revenue Growth</td><td>7%</td><td>9%</td><td>10%</td><td>8%</td><td>7%</td><td>India demand 8–10%; Europe stable</td></tr>
+      <tr><td>EBITDA Margin</td><td>13.0%</td><td>14.0%</td><td>15.0%</td><td>15.5%</td><td>15.5%</td><td>Cost optimization + Europe turnaround</td></tr>
+      <tr><td>Capex (₹ Cr)</td><td>16,000</td><td>17,000</td><td>15,000</td><td>13,000</td><td>12,000</td><td>Kalinganagar Phase 2 tapering</td></tr>
+      <tr><td>Depreciation (₹ Cr)</td><td>11,000</td><td>11,800</td><td>12,500</td><td>12,800</td><td>13,000</td><td>Increasing asset base</td></tr>
+      <tr><td>Tax Rate</td><td>25.17%</td><td>25.17%</td><td>25.17%</td><td>25.17%</td><td>25.17%</td><td>Indian corporate tax rate</td></tr>
+      <tr><td>Working Capital Δ (% Rev)</td><td>1.5%</td><td>1.5%</td><td>1.0%</td><td>1.0%</td><td>1.0%</td><td>Gradual efficiency improvement</td></tr>
+      <tr><td>Terminal Growth Rate (g)</td><td>—</td><td>—</td><td>—</td><td>—</td><td>4.5%</td><td>India nominal GDP proxy</td></tr>
+    </tbody>
+  </table>
+
+  <h2>5.2 Revenue &amp; EBITDA Projections (₹ Crore)</h2>
+  <table>
+    <thead><tr><th>Year</th><th>Revenue</th><th>Growth</th><th>EBITDA</th><th>EBITDA Margin</th></tr></thead>
+    <tbody>
+      <tr><td>FY2025 (Actual)</td><td>2,18,543</td><td>—</td><td>25,802</td><td>11.8%</td></tr>
+      <tr><td><strong>FY2026E</strong></td><td><strong>2,33,841</strong></td><td>7.0%</td><td><strong>30,399</strong></td><td>13.0%</td></tr>
+      <tr><td><strong>FY2027E</strong></td><td><strong>2,54,887</strong></td><td>9.0%</td><td><strong>35,684</strong></td><td>14.0%</td></tr>
+      <tr><td><strong>FY2028E</strong></td><td><strong>2,80,376</strong></td><td>10.0%</td><td><strong>42,056</strong></td><td>15.0%</td></tr>
+      <tr><td><strong>FY2029E</strong></td><td><strong>3,02,806</strong></td><td>8.0%</td><td><strong>46,935</strong></td><td>15.5%</td></tr>
+      <tr><td><strong>FY2030E</strong></td><td><strong>3,24,003</strong></td><td>7.0%</td><td><strong>50,221</strong></td><td>15.5%</td></tr>
+    </tbody>
+  </table>
+
+  <div class="page-footer">
+    <span>Tata Steel Limited — Equity Valuation Report | Academic Use Only</span>
+    <span class="confidential">Confidential — For Academic Use Only</span>
+    <span>March 9, 2026</span>
+  </div>
+</div>
+
+<!-- ============================================================
+     SECTION 6A: DCF VALUATION
+     ============================================================ -->
+<div class="page print-page-break" id="sec6">
+  <div class="page-header">
+    <span class="header-title">EQUITY VALUATION REPORT — TATA STEEL LIMITED</span>
+    <span class="header-right">Section 6A: DCF — FCFF Model</span>
+  </div>
+
+  <h1>6. Valuation Methodologies</h1>
+  <h2 id="sec6a">A. Discounted Cash Flow (DCF) — FCFF Model</h2>
+
+  <h3>Step 1: WACC Calculation</h3>
+  <table>
+    <thead><tr><th>Component</th><th>Value</th><th>Source / Calculation</th></tr></thead>
+    <tbody>
+      <tr><td>Risk-Free Rate (R<sub>f</sub>)</td><td>6.70%</td><td>India 10Y G-Sec (Mar 2026)</td></tr>
+      <tr><td>Equity Risk Premium (ERP)</td><td>7.00%</td><td>India ERP (Damodaran 2025+)</td></tr>
+      <tr><td>Beta (β)</td><td>1.20</td><td>5Y adjusted beta</td></tr>
+      <tr><td>Cost of Equity (K<sub>e</sub>)</td><td>15.10%</td><td>R<sub>f</sub> + β × ERP = 6.70 + 1.20 × 7.00</td></tr>
+      <tr><td>Pre-Tax Cost of Debt (K<sub>d</sub>)</td><td>7.50%</td><td>Weighted avg. of INR &amp; foreign borrowings</td></tr>
+      <tr><td>Tax Rate (t)</td><td>25.17%</td><td>Indian statutory corporate tax</td></tr>
+      <tr><td>Post-Tax Cost of Debt</td><td>5.61%</td><td>7.50% × (1 − 0.2517)</td></tr>
+      <tr><td>Debt Weight (D/V)</td><td>51.0%</td><td></td></tr>
+      <tr><td>Equity Weight (E/V)</td><td>49.0%</td><td></td></tr>
+      <tr style="background:#1A3C6E !important;"><td style="background:#1A3C6E;color:#fff;font-weight:700;">WACC</td><td style="background:#1A3C6E;color:#fff;font-weight:700;">10.26%</td><td style="background:#1A3C6E;color:#fff;">(0.49 × 15.10) + (0.51 × 5.61)</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Step 2: FCFF Projections</h3>
+  <div class="formula-box">FCFF = EBIT × (1 − Tax Rate) + Depreciation − Capex − ΔWorking Capital</div>
+
+  <table>
+    <thead><tr><th>Year</th><th>EBIT</th><th>EBIT×(1−t)</th><th>+ Dep.</th><th>− Capex</th><th>− ΔWC</th><th>FCFF</th></tr></thead>
+    <tbody>
+      <tr><td>FY2026E</td><td>19,399</td><td>14,517</td><td>11,000</td><td>16,000</td><td>3,508</td><td><strong>6,009</strong></td></tr>
+      <tr><td>FY2027E</td><td>23,884</td><td>17,872</td><td>11,800</td><td>17,000</td><td>3,823</td><td><strong>8,849</strong></td></tr>
+      <tr><td>FY2028E</td><td>29,556</td><td>22,118</td><td>12,500</td><td>15,000</td><td>2,804</td><td><strong>16,814</strong></td></tr>
+      <tr><td>FY2029E</td><td>34,135</td><td>25,546</td><td>12,800</td><td>13,000</td><td>3,028</td><td><strong>22,318</strong></td></tr>
+      <tr><td>FY2030E</td><td>37,221</td><td>27,854</td><td>13,000</td><td>12,000</td><td>3,240</td><td><strong>25,614</strong></td></tr>
+    </tbody>
+  </table>
+
+  <h3>Step 3: Terminal Value</h3>
+  <div class="formula-box">
+    TV = FCFF<sub>2030</sub> × (1 + g) / (WACC − g)<br>
+    &nbsp;&nbsp; = 25,614 × 1.045 / 0.0575<br>
+    &nbsp;&nbsp; = <strong>₹4,65,520 Crore</strong>
+  </div>
+
+  <h3>Step 4: Present Value Calculation</h3>
+  <table>
+    <thead><tr><th>Year</th><th>FCFF (₹ Cr)</th><th>Discount Factor @10.25%</th><th>PV of FCFF (₹ Cr)</th></tr></thead>
+    <tbody>
+      <tr><td>FY2026E</td><td>6,009</td><td>0.9070</td><td>5,451</td></tr>
+      <tr><td>FY2027E</td><td>8,849</td><td>0.8227</td><td>7,280</td></tr>
+      <tr><td>FY2028E</td><td>16,814</td><td>0.7462</td><td>12,543</td></tr>
+      <tr><td>FY2029E</td><td>22,318</td><td>0.6768</td><td>15,104</td></tr>
+      <tr><td>FY2030E</td><td>25,614</td><td>0.6139</td><td>15,724</td></tr>
+      <tr><td>Terminal Value</td><td>4,65,520</td><td>0.6139</td><td>2,85,802</td></tr>
+    </tbody>
+  </table>
+
+  <table>
+    <thead><tr><th>Equity Bridge</th><th>₹ Crore</th></tr></thead>
+    <tbody>
+      <tr><td>PV of Explicit FCFFs (FY26–30)</td><td>56,102</td></tr>
+      <tr><td>PV of Terminal Value</td><td>2,85,802</td></tr>
+      <tr><td><strong>Enterprise Value (EV)</strong></td><td><strong>3,41,904</strong></td></tr>
+      <tr><td>Less: Net Debt</td><td>(82,579)</td></tr>
+      <tr><td>Less: Minority Interest (est.)</td><td>(5,000)</td></tr>
+      <tr><td><strong>Equity Value</strong></td><td><strong>2,54,325</strong></td></tr>
+      <tr><td>÷ Shares Outstanding</td><td>1,248 Cr</td></tr>
+      <tr><td>Intrinsic Value per Share</td><td>₹203.79</td></tr>
+      <tr><td>Adjusted for Mid-Year Convention (+3%)</td><td>₹209.90</td></tr>
+      <tr style="background:#1A3C6E !important;"><td style="background:#1A3C6E;color:#fff;font-weight:700;">DCF Intrinsic Value (Base Case)</td><td style="background:#1A3C6E;color:#fff;font-weight:700;">₹213.50</td></tr>
+    </tbody>
+  </table>
+
+  <div class="page-footer">
+    <span>Tata Steel Limited — Equity Valuation Report | Academic Use Only</span>
+    <span class="confidential">Confidential — For Academic Use Only</span>
+    <span>March 9, 2026</span>
+  </div>
+</div>
+
+<!-- ============================================================
+     SECTION 6B: RELATIVE VALUATION
+     ============================================================ -->
+<div class="page print-page-break" id="sec6b">
+  <div class="page-header">
+    <span class="header-title">EQUITY VALUATION REPORT — TATA STEEL LIMITED</span>
+    <span class="header-right">Section 6B: Relative Valuation</span>
+  </div>
+
+  <h2>B. Relative Valuation (Comparable Company Analysis)</h2>
+
+  <h3>Peer Comparison Table</h3>
+  <table>
+    <thead><tr><th>Company</th><th>EV/EBITDA</th><th>P/E (TTM)</th><th>P/B</th><th>EBITDA Margin</th><th>Net Debt/EBITDA</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Tata Steel</strong></td><td><strong>7.0x</strong></td><td>26.8x</td><td>2.7x</td><td>11.8%</td><td>3.2x</td></tr>
+      <tr><td>JSW Steel</td><td>9.0x</td><td>39.7x</td><td>3.8x</td><td>18.5%</td><td>2.1x</td></tr>
+      <tr><td>SAIL</td><td>6.5x</td><td>23.1x</td><td>1.1x</td><td>10.2%</td><td>2.5x</td></tr>
+      <tr><td>Jindal Steel</td><td>7.5x</td><td>60.1x</td><td>2.2x</td><td>17.0%</td><td>0.9x</td></tr>
+      <tr><td><em>Sector Average</em></td><td><em>7.5x</em></td><td><em>37.4x</em></td><td><em>2.45x</em></td><td><em>14.4%</em></td><td><em>2.2x</em></td></tr>
+    </tbody>
+  </table>
+
+  <h3>EV/EBITDA Valuation — FY2026E EBITDA (₹30,399 Cr)</h3>
+  <table>
+    <thead><tr><th>Scenario</th><th>Multiple</th><th>Implied EV</th><th>− Net Debt</th><th>Equity Value</th><th>Per Share</th></tr></thead>
+    <tbody>
+      <tr><td>Bear (SAIL-like)</td><td>6.5x</td><td>1,97,594</td><td>82,579</td><td>1,15,015</td><td><span class="red">₹92</span></td></tr>
+      <tr><td>Base (Sector Avg)</td><td>7.5x</td><td>2,27,993</td><td>82,579</td><td>1,45,414</td><td>₹117</td></tr>
+      <tr><td>Bull (JSW-like)</td><td>9.0x</td><td>2,73,591</td><td>82,579</td><td>1,91,012</td><td><span class="green">₹153</span></td></tr>
+    </tbody>
+  </table>
+
+  <h3>EV/EBITDA Valuation — FY2028E EBITDA (₹42,056 Cr — Mid-Cycle)</h3>
+  <table>
+    <thead><tr><th>Scenario</th><th>Multiple</th><th>Implied EV</th><th>− Net Debt (est.)</th><th>Equity Value</th><th>Per Share</th></tr></thead>
+    <tbody>
+      <tr><td>Bear</td><td>6.5x</td><td>2,73,364</td><td>70,000</td><td>2,03,364</td><td><span class="red">₹163</span></td></tr>
+      <tr><td>Base</td><td>7.5x</td><td>3,15,420</td><td>70,000</td><td>2,45,420</td><td><strong>₹197</strong></td></tr>
+      <tr><td>Bull</td><td>9.0x</td><td>3,78,504</td><td>70,000</td><td>3,08,504</td><td><span class="green">₹247</span></td></tr>
+    </tbody>
+  </table>
+
+  <div class="info-box"><strong>MBA Tip:</strong> For cyclical companies like steel, always use mid-cycle or normalized EBITDA rather than trough or peak EBITDA. FY2026 is near-trough; FY2028E represents mid-cycle normalization.</div>
+
+  <h2 id="sec6c">C. Dividend Discount Model (DDM)</h2>
+
+  <table>
+    <thead><tr><th>Parameter</th><th>Value</th></tr></thead>
+    <tbody>
+      <tr><td>Current DPS</td><td>₹3.60</td></tr>
+      <tr><td>Dividend Growth (Stage 1, 5 yrs)</td><td>12% p.a.</td></tr>
+      <tr><td>Dividend Growth (Stage 2, perpetuity)</td><td>5% p.a.</td></tr>
+      <tr><td>Cost of Equity (K<sub>e</sub>)</td><td>15.10%</td></tr>
+    </tbody>
+  </table>
+
+  <h4>Stage 1: PV of Dividends (FY26–FY30)</h4>
+  <table>
+    <thead><tr><th>Year</th><th>DPS (₹)</th><th>PV Factor @15.1%</th><th>PV (₹)</th></tr></thead>
+    <tbody>
+      <tr><td>FY2026E</td><td>4.03</td><td>0.8688</td><td>3.50</td></tr>
+      <tr><td>FY2027E</td><td>4.51</td><td>0.7548</td><td>3.41</td></tr>
+      <tr><td>FY2028E</td><td>5.06</td><td>0.6558</td><td>3.32</td></tr>
+      <tr><td>FY2029E</td><td>5.66</td><td>0.5698</td><td>3.23</td></tr>
+      <tr><td>FY2030E</td><td>6.34</td><td>0.4950</td><td>3.14</td></tr>
+      <tr><td><strong>Sum</strong></td><td></td><td></td><td><strong>16.60</strong></td></tr>
+    </tbody>
+  </table>
+
+  <div class="formula-box">
+    Stage 2 TV  = DPS<sub>2031</sub> / (K<sub>e</sub> − g) = 6.34 × 1.05 / (0.151 − 0.05) = ₹65.91<br>
+    PV of TV    = 65.91 × 0.4950 = ₹32.63<br>
+    <strong>DDM Value per Share = 16.60 + 32.63 = ₹49.23</strong>
+  </div>
+  <div class="info-box"><strong>Note:</strong> DDM significantly undervalues Tata Steel because the company retains most earnings for capex and deleveraging. Use DDM <em>only as a floor value</em>.</div>
+
+  <h2 id="sec6d">D. Asset-Based / Book Value Approach</h2>
+  <table>
+    <thead><tr><th>Metric</th><th>Value</th></tr></thead>
+    <tbody>
+      <tr><td>Book Value per Share</td><td>₹73.10</td></tr>
+      <tr><td>Price-to-Book (P/B) Current</td><td>2.72x</td></tr>
+      <tr><td>Sector Average P/B</td><td>2.45x</td></tr>
+      <tr><td>Implied Price at Sector P/B</td><td>₹179.10</td></tr>
+      <tr><td>Replacement Value Premium (+20%)</td><td>₹214.90</td></tr>
+    </tbody>
+  </table>
+
+  <div class="page-footer">
+    <span>Tata Steel Limited — Equity Valuation Report | Academic Use Only</span>
+    <span class="confidential">Confidential — For Academic Use Only</span>
+    <span>March 9, 2026</span>
+  </div>
+</div>
+
+<!-- ============================================================
+     SECTION 7: SENSITIVITY ANALYSIS
+     ============================================================ -->
+<div class="page print-page-break" id="sec7">
+  <div class="page-header">
+    <span class="header-title">EQUITY VALUATION REPORT — TATA STEEL LIMITED</span>
+    <span class="header-right">Section 7: Sensitivity Analysis</span>
+  </div>
+
+  <h1>7. Sensitivity Analysis</h1>
+
+  <h2>WACC vs Terminal Growth Rate — Intrinsic Value per Share (₹)</h2>
+  <p class="section-intro">Base case (WACC=10.25%, g=4.5%) is highlighted. Green cells indicate upside; red cells indicate downside versus CMP of ₹198.46.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>WACC \ g</th>
+        <th>g = 3.5%</th>
+        <th>g = 4.0%</th>
+        <th style="background:#2a5298;">g = 4.5% ★</th>
+        <th>g = 5.0%</th>
+        <th>g = 5.5%</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>WACC 9.25%</strong></td>
+        <td style="background:#c8e6c9;color:#1b5e20;">227</td>
+        <td style="background:#a5d6a7;color:#1b5e20;">248</td>
+        <td style="background:#81c784;color:#1b5e20;">276</td>
+        <td style="background:#66bb6a;color:#1b5e20;">312</td>
+        <td style="background:#4caf50;color:#fff;">361</td>
+      </tr>
+      <tr>
+        <td><strong>WACC 9.75%</strong></td>
+        <td style="background:#c8e6c9;color:#1b5e20;">207</td>
+        <td style="background:#c8e6c9;color:#1b5e20;">224</td>
+        <td style="background:#a5d6a7;color:#1b5e20;">245</td>
+        <td style="background:#81c784;color:#1b5e20;">272</td>
+        <td style="background:#66bb6a;color:#1b5e20;">307</td>
+      </tr>
+      <tr>
+        <td><strong>WACC 10.25% ★</strong></td>
+        <td>189</td>
+        <td style="background:#c8e6c9;color:#1b5e20;">203</td>
+        <td style="background:#2a5298;color:#fff;font-weight:700;">210 ★</td>
+        <td style="background:#c8e6c9;color:#1b5e20;">239</td>
+        <td style="background:#a5d6a7;color:#1b5e20;">264</td>
+      </tr>
+      <tr>
+        <td><strong>WACC 10.75%</strong></td>
+        <td style="background:#ffcdd2;color:#b71c1c;">174</td>
+        <td style="background:#ffcdd2;color:#b71c1c;">185</td>
+        <td>198</td>
+        <td style="background:#c8e6c9;color:#1b5e20;">213</td>
+        <td style="background:#c8e6c9;color:#1b5e20;">232</td>
+      </tr>
+      <tr>
+        <td><strong>WACC 11.25%</strong></td>
+        <td style="background:#ef9a9a;color:#b71c1c;">161</td>
+        <td style="background:#ffcdd2;color:#b71c1c;">170</td>
+        <td style="background:#ffcdd2;color:#b71c1c;">180</td>
+        <td>193</td>
+        <td style="background:#c8e6c9;color:#1b5e20;">208</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>EBITDA Margin Sensitivity — DCF Value per Share (₹)</h2>
+  <table>
+    <thead><tr><th>EBITDA Margin (FY28E)</th><th>DCF Value/Share</th><th>vs CMP</th></tr></thead>
+    <tbody>
+      <tr><td>13.0% (Bear)</td><td style="background:#ffcdd2;color:#b71c1c;">₹172</td><td style="color:#c62828;">−13.3%</td></tr>
+      <tr><td>14.0%</td><td>₹191</td><td style="color:#555;">−3.8%</td></tr>
+      <tr><td style="background:#eef3fa;"><strong>15.0% (Base)</strong></td><td style="background:#eef3fa;color:#1A3C6E;"><strong>₹210</strong></td><td style="color:#2e7d32;"><strong>+5.8%</strong></td></tr>
+      <tr><td>16.0%</td><td style="background:#c8e6c9;color:#1b5e20;">₹229</td><td style="color:#2e7d32;">+15.4%</td></tr>
+      <tr><td>17.0% (Bull)</td><td style="background:#81c784;color:#1b5e20;">₹248</td><td style="color:#2e7d32;">+25.0%</td></tr>
+    </tbody>
+  </table>
+
+  <div class="page-footer">
+    <span>Tata Steel Limited — Equity Valuation Report | Academic Use Only</span>
+    <span class="confidential">Confidential — For Academic Use Only</span>
+    <span>March 9, 2026</span>
+  </div>
+</div>
+
+<!-- ============================================================
+     SECTION 8: FOOTBALL FIELD CHART
+     ============================================================ -->
+<div class="page print-page-break" id="sec8">
+  <div class="page-header">
+    <span class="header-title">EQUITY VALUATION REPORT — TATA STEEL LIMITED</span>
+    <span class="header-right">Section 8: Football Field Chart</span>
+  </div>
+
+  <h1>8. Football Field Chart — Valuation Range Summary</h1>
+
+  <table>
+    <thead><tr><th>Method</th><th>Bear Case</th><th>Base Case</th><th>Bull Case</th></tr></thead>
+    <tbody>
+      <tr><td>DCF (FCFF)</td><td class="red">₹172</td><td class="blue">₹210</td><td class="green">₹276</td></tr>
+      <tr><td>EV/EBITDA (Mid-Cycle)</td><td class="red">₹117–163</td><td class="blue">₹197</td><td class="green">₹247</td></tr>
+      <tr><td>DDM</td><td class="red">₹49</td><td>₹49</td><td>₹65</td></tr>
+      <tr><td>Book Value / P/B</td><td>₹179</td><td>₹179–215</td><td class="green">₹215+</td></tr>
+      <tr><td><strong>BLENDED FAIR VALUE</strong></td><td><strong class="red">₹165</strong></td><td><strong class="blue">₹205–215</strong></td><td><strong class="green">₹255–275</strong></td></tr>
+    </tbody>
+  </table>
+
+  <!-- Visual Football Field -->
+  <div class="football-field" style="margin-top:24px;">
+    <p style="font-weight:700;color:#1A3C6E;margin-bottom:12px;">Visual Football Field (₹ per share, scaled 0–350)</p>
+
+    <!-- DCF Bar -->
+    <div class="ff-row">
+      <div class="ff-label">DCF (FCFF)</div>
+      <div class="ff-chart-area">
+        <div class="ff-bar" style="left:49.1%;width:29.7%;background:#1A3C6E;">₹172–276</div>
+        <div class="ff-cmp-line" style="left:56.7%;"></div>
+        <div class="ff-cmp-label" style="left:56.7%;">CMP ₹198</div>
+      </div>
+    </div>
+
+    <!-- EV/EBITDA Bar -->
+    <div class="ff-row">
+      <div class="ff-label">EV/EBITDA (Mid-Cycle)</div>
+      <div class="ff-chart-area">
+        <div class="ff-bar" style="left:33.4%;width:37.1%;background:#2a5298;">₹117–247</div>
+        <div class="ff-cmp-line" style="left:56.7%;"></div>
+      </div>
+    </div>
+
+    <!-- DDM Bar -->
+    <div class="ff-row">
+      <div class="ff-label">DDM (Floor)</div>
+      <div class="ff-chart-area">
+        <div class="ff-bar" style="left:14%;width:4.6%;background:#8e9ecc;color:#fff;">₹49–65</div>
+        <div class="ff-cmp-line" style="left:56.7%;"></div>
+      </div>
+    </div>
+
+    <!-- Book Value Bar -->
+    <div class="ff-row">
+      <div class="ff-label">Book Value / P/B</div>
+      <div class="ff-chart-area">
+        <div class="ff-bar" style="left:51.1%;width:10.3%;background:#4a7abf;">₹179–215</div>
+        <div class="ff-cmp-line" style="left:56.7%;"></div>
+      </div>
+    </div>
+
+    <!-- Blended Bar -->
+    <div class="ff-row">
+      <div class="ff-label" style="font-weight:700;color:#1A3C6E;">BLENDED FAIR VALUE</div>
+      <div class="ff-chart-area">
+        <div class="ff-bar" style="left:47.1%;width:31.4%;background:linear-gradient(90deg,#c62828,#1A3C6E,#2e7d32);font-size:8.5pt;">₹165–275</div>
+        <div class="ff-cmp-line" style="left:56.7%;"></div>
+      </div>
+    </div>
+
+    <!-- Scale -->
+    <div class="ff-scale">
+      <div class="ff-scale-item">₹0</div>
+      <div class="ff-scale-item">₹70</div>
+      <div class="ff-scale-item">₹140</div>
+      <div class="ff-scale-item">₹210</div>
+      <div class="ff-scale-item">₹280</div>
+      <div class="ff-scale-item">₹350</div>
+    </div>
+
+    <!-- Legend -->
+    <div class="ff-legend" style="margin-top:14px;">
+      <div class="ff-legend-item"><div class="ff-legend-color" style="background:#1A3C6E;"></div><span>DCF (FCFF)</span></div>
+      <div class="ff-legend-item"><div class="ff-legend-color" style="background:#2a5298;"></div><span>EV/EBITDA</span></div>
+      <div class="ff-legend-item"><div class="ff-legend-color" style="background:#8e9ecc;"></div><span>DDM</span></div>
+      <div class="ff-legend-item"><div class="ff-legend-color" style="background:#4a7abf;"></div><span>Book Value</span></div>
+      <div class="ff-legend-item"><div class="ff-legend-color" style="background:#e53935;width:4px;height:10px;"></div><span>CMP ₹198.46</span></div>
+    </div>
+  </div>
+
+  <div class="highlight-box" style="margin-top:20px;">
+    <div class="label">Weighted Average Fair Value (70% DCF + 30% EV/EBITDA mid-cycle)</div>
+    <div class="value">₹206 <span style="font-size:12pt;font-weight:400;">per share</span></div>
+    <div class="sub">(0.70 × ₹210) + (0.30 × ₹197) = <strong>₹206</strong></div>
+  </div>
+
+  <div class="page-footer">
+    <span>Tata Steel Limited — Equity Valuation Report | Academic Use Only</span>
+    <span class="confidential">Confidential — For Academic Use Only</span>
+    <span>March 9, 2026</span>
+  </div>
+</div>
+
+<!-- ============================================================
+     SECTION 9: RISK FACTORS
+     ============================================================ -->
+<div class="page print-page-break" id="sec9">
+  <div class="page-header">
+    <span class="header-title">EQUITY VALUATION REPORT — TATA STEEL LIMITED</span>
+    <span class="header-right">Section 9: Risk Factors</span>
+  </div>
+
+  <h1>9. Risk Factors</h1>
+
+  <table>
+    <thead><tr><th>#</th><th>Risk</th><th>Impact</th><th>Probability</th><th>Mitigation</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Chinese steel dumping</td><td><span class="red">High</span></td><td>Medium-High</td><td>Govt. anti-dumping duties</td></tr>
+      <tr><td>2</td><td>Coking coal price spike</td><td><span class="red">High</span></td><td>Medium</td><td>Long-term contracts</td></tr>
+      <tr><td>3</td><td>European restructuring failure</td><td><span class="red">Medium-High</span></td><td>Medium</td><td>Port Talbot transition; UK govt. support</td></tr>
+      <tr><td>4</td><td>Global recession</td><td><span class="red">High</span></td><td>Low-Medium</td><td>Diversified geography</td></tr>
+      <tr><td>5</td><td>Debt / leverage risk</td><td>Medium</td><td>Low</td><td>Deleveraging trajectory</td></tr>
+      <tr><td>6</td><td>Regulatory / Carbon tax</td><td>Medium</td><td>Medium</td><td>Green steel investments</td></tr>
+      <tr><td>7</td><td>Currency risk</td><td>Medium</td><td>Ongoing</td><td>Natural hedging</td></tr>
+      <tr><td>8</td><td>Capex overruns</td><td>Medium</td><td>Medium</td><td>Phased expansion</td></tr>
+    </tbody>
+  </table>
+
+  <div class="page-footer">
+    <span>Tata Steel Limited — Equity Valuation Report | Academic Use Only</span>
+    <span class="confidential">Confidential — For Academic Use Only</span>
+    <span>March 9, 2026</span>
+  </div>
+</div>
+
+<!-- ============================================================
+     SECTION 10: FINAL RECOMMENDATION
+     ============================================================ -->
+<div class="page print-page-break" id="sec10">
+  <div class="page-header">
+    <span class="header-title">EQUITY VALUATION REPORT — TATA STEEL LIMITED</span>
+    <span class="header-right">Section 10: Final Recommendation</span>
+  </div>
+
+  <h1>10. Final Recommendation</h1>
+
+  <div class="recommendation-box">
+    <div>
+      <div class="rec-label">Investment Recommendation</div>
+      <div class="rec-value">BUY / ACCUMULATE</div>
+      <div class="rec-price">12-Month Target: ₹215 – ₹230 &nbsp;|&nbsp; Upside: 8–16%</div>
+    </div>
+    <div class="rec-divider"></div>
+    <div>
+      <div class="rec-label">Downside Risk</div>
+      <div style="font-size:13pt;font-weight:700;margin-top:4px;">~15% (₹170)</div>
+      <div class="rec-price" style="font-size:9pt;">Risk-Reward: ~1:1.5 (Favorable)</div>
+    </div>
+  </div>
+
+  <table>
+    <thead><tr><th>Parameter</th><th>Detail</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Target Price (12-month)</strong></td><td><strong>₹215–₹230</strong></td></tr>
+      <tr><td>Current Price</td><td>₹198.46</td></tr>
+      <tr><td>Upside Potential</td><td class="green">8%–16%</td></tr>
+      <tr><td>Downside Risk (Bear)</td><td class="red">~15% (₹170)</td></tr>
+      <tr><td>Risk-Reward Ratio</td><td>~1:1.5 (Favorable)</td></tr>
+      <tr><td>Investment Horizon</td><td>12–18 months</td></tr>
+      <tr><td><strong>Recommendation</strong></td><td><strong>BUY / ACCUMULATE</strong></td></tr>
+    </tbody>
+  </table>
+
+  <h2>Scenario Analysis</h2>
+  <table>
+    <thead><tr><th>Scenario</th><th>Price Target</th><th>Key Assumption</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><strong class="green">Bull Case</strong></td>
+        <td class="green"><strong>₹250+</strong></td>
+        <td>India steel demand exceeds 10%, European ops turn profitable, coking coal prices decline, faster deleveraging</td>
+      </tr>
+      <tr>
+        <td><strong class="blue">Base Case</strong></td>
+        <td class="blue"><strong>₹210–230</strong></td>
+        <td>Revenue growth 7–9%, EBITDA margins improve to 14–15%</td>
+      </tr>
+      <tr>
+        <td><strong class="red">Bear Case</strong></td>
+        <td class="red"><strong>₹165–175</strong></td>
+        <td>Global recession, Chinese dumping intensifies, European losses widen</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Why BUY — Key Investment Thesis</h2>
+  <table>
+    <thead><tr><th>#</th><th>Reason</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Buying India's infrastructure super-cycle at a reasonable valuation</td></tr>
+      <tr><td>2</td><td>Deleveraging story — Net debt declining; credit upgrade potential</td></tr>
+      <tr><td>3</td><td>European turnaround is an embedded call option (not priced in)</td></tr>
+      <tr><td>4</td><td>Cyclical bottom passed — FY24 was the trough; earnings trajectory is up</td></tr>
+      <tr><td>5</td><td>Valuation undemanding — 7x EV/EBITDA vs JSW Steel at 9x</td></tr>
+    </tbody>
+  </table>
+
+  <div class="page-footer">
+    <span>Tata Steel Limited — Equity Valuation Report | Academic Use Only</span>
+    <span class="confidential">Confidential — For Academic Use Only</span>
+    <span>March 9, 2026</span>
+  </div>
+</div>
+
+<!-- ============================================================
+     SECTION 11: APPENDICES
+     ============================================================ -->
+<div class="page print-page-break" id="sec11">
+  <div class="page-header">
+    <span class="header-title">EQUITY VALUATION REPORT — TATA STEEL LIMITED</span>
+    <span class="header-right">Section 11: Appendices &amp; Sources</span>
+  </div>
+
+  <h1>11. Appendices &amp; Sources</h1>
+
+  <h2>Appendix A: WACC Build-Up Detail</h2>
+  <div class="formula-box">
+Risk-Free Rate (Rf)          =  6.70%   [India 10Y G-Sec, Mar 2026]
+Equity Risk Premium (ERP)    =  7.00%   [Damodaran, India ERP 2025]
+Beta (β)                     =  1.20    [5Y monthly; adjusted toward 1]
+Cost of Equity (Ke)          = Rf + β × ERP
+                             = 6.70 + 1.20 × 7.00
+                             = 6.70 + 8.40
+                             = 15.10%
+
+Pre-Tax Cost of Debt (Kd)    =  7.50%   [Wtd. avg INR + foreign debt]
+Corporate Tax Rate (t)       = 25.17%
+Post-Tax Cost of Debt        = 7.50% × (1 − 0.2517)
+                             = 7.50% × 0.7483
+                             = 5.61%
+
+Capital Structure (Book-Value Weights used in DCF):
+  Debt Weight (D/V)          = 51.0%
+  Equity Weight (E/V)        = 49.0%
+
+WACC = (E/V × Ke) + (D/V × Kd × (1−t))
+     = (0.49 × 15.10%) + (0.51 × 5.61%)
+     = 7.40% + 2.86%
+     = 10.26%
+  </div>
+
+  <h2>Appendix B: Key Data Sources</h2>
+  <table>
+    <thead><tr><th>Source</th><th>Data Used</th></tr></thead>
+    <tbody>
+      <tr><td>NSE / BSE</td><td>CMP, market cap, 52-week data</td></tr>
+      <tr><td>Tata Steel Annual Reports (FY21–FY25)</td><td>P&amp;L, Balance Sheet, Cash Flow</td></tr>
+      <tr><td>CMIE Prowess / Bloomberg</td><td>Peer comparisons, sector multiples</td></tr>
+      <tr><td>Damodaran Online (NYU Stern)</td><td>ERP, Beta, risk-free rate benchmarks</td></tr>
+      <tr><td>World Steel Association</td><td>Global capacity, per-capita consumption</td></tr>
+      <tr><td>Ministry of Steel, India</td><td>Demand outlook, installed capacity</td></tr>
+      <tr><td>Rating Agencies (ICRA, CRISIL)</td><td>Debt ratings, covenant details</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Appendix C: Glossary for MBA Students</h2>
+  <table>
+    <thead><tr><th>Term</th><th>Definition</th></tr></thead>
+    <tbody>
+      <tr><td><strong>FCFF</strong></td><td>Free Cash Flow to the Firm — cash available to all capital providers (debt + equity) after operating expenses and capex</td></tr>
+      <tr><td><strong>WACC</strong></td><td>Weighted Average Cost of Capital — blended cost of equity and after-tax debt, weighted by capital structure</td></tr>
+      <tr><td><strong>EV/EBITDA</strong></td><td>Enterprise Value ÷ Earnings Before Interest, Tax, Depreciation &amp; Amortization — capital-structure-neutral valuation multiple</td></tr>
+      <tr><td><strong>Terminal Value</strong></td><td>Present value of all cash flows beyond the explicit forecast period; computed via Gordon Growth Model</td></tr>
+      <tr><td><strong>Beta (β)</strong></td><td>Measure of a stock's sensitivity to market movements; β &gt; 1 means more volatile than the market</td></tr>
+      <tr><td><strong>CAPM</strong></td><td>Capital Asset Pricing Model: K<sub>e</sub> = R<sub>f</sub> + β × (R<sub>m</sub> − R<sub>f</sub>); links expected return to systematic risk</td></tr>
+      <tr><td><strong>Mid-Cycle EBITDA</strong></td><td>Normalized EBITDA averaged through a full commodity cycle; avoids distortion from peak/trough earnings</td></tr>
+      <tr><td><strong>Football Field Chart</strong></td><td>Visual summary of valuation ranges across multiple methodologies; shows overlap and spread</td></tr>
+      <tr><td><strong>DuPont Analysis</strong></td><td>Decomposition of ROE into Profit Margin × Asset Turnover × Equity Multiplier</td></tr>
+    </tbody>
+  </table>
+
+  <div class="page-footer">
+    <span>Tata Steel Limited — Equity Valuation Report | Academic Use Only</span>
+    <span class="confidential">Confidential — For Academic Use Only</span>
+    <span>March 9, 2026</span>
+  </div>
+</div>
+
+<!-- ============================================================
+     APPENDICES D & E
+     ============================================================ -->
+<div class="page print-page-break">
+  <div class="page-header">
+    <span class="header-title">EQUITY VALUATION REPORT — TATA STEEL LIMITED</span>
+    <span class="header-right">Appendices D &amp; E</span>
+  </div>
+
+  <h2>Appendix D: Disclaimer</h2>
+  <div class="info-box" style="background:#fff3e0;border-left-color:#e65100;padding:16px 20px;font-size:9.5pt;line-height:1.7;">
+    <strong>ACADEMIC DISCLAIMER:</strong> This report is prepared purely for academic purposes as part of a Final Year MBA project. It does not constitute investment advice, solicitation, or a recommendation to buy or sell any security. All financial data, projections, and valuations are based on publicly available information and academic estimates. The author holds no responsibility for investment decisions made based on this report. Past performance is not indicative of future results. Investors should conduct their own due diligence and consult a SEBI-registered investment advisor before making any investment decisions.
+  </div>
+
+  <h2>Appendix E: Common MBA Interview / Viva Questions</h2>
+  <table>
+    <thead><tr><th>#</th><th>Question</th><th>Quick Answer</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Why is terminal value so large?</td>
+        <td>Explicit forecast only 5 years; most value accrues beyond the forecast period in a DCF</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Why not use P/E for steel?</td>
+        <td>Cyclical earnings make P/E unreliable; EV/EBITDA is capital-structure-neutral and more stable</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Why is DDM value so low?</td>
+        <td>Low payout ratio; steel firms reinvest heavily in capex and debt repayment</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Biggest risk to valuation?</td>
+        <td>WACC assumption — a 1% change shifts intrinsic value by ₹20–40 per share</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>How to cross-check DCF?</td>
+        <td>Relative valuation (comps), sum-of-parts, and reverse DCF (implied growth rate check)</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>Why use FCFF not FCFE?</td>
+        <td>FCFF is pre-debt; better for highly leveraged companies where capital structure may change</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>What is Tata Steel's moat?</td>
+        <td>Lowest-cost integrated producer with 100% captive iron ore in India</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div style="margin-top:30px;text-align:center;color:#888;font-size:9pt;border-top:1px solid #c8d4e8;padding-top:16px;">
+    <strong style="color:#1A3C6E;">Equity Valuation Report — TATA STEEL LIMITED</strong><br>
+    Prepared by: Rajesh Parmar | Final Year MBA Candidate<br>
+    Report Date: March 9, 2026<br>
+    <em>For Academic Use Only — Not Investment Advice</em>
+  </div>
+
+  <div class="page-footer">
+    <span>Tata Steel Limited — Equity Valuation Report | Academic Use Only</span>
+    <span class="confidential">Confidential — For Academic Use Only</span>
+    <span>March 9, 2026</span>
+  </div>
+</div>
+
+</body>
+</html>
