@@ -17,7 +17,7 @@
 3. [Industry & Macro Analysis](#3-industry--macro-analysis)
 4. [Historical Financial Analysis](#4-historical-financial-analysis)
 5. [Assumptions & Forecasting](#5-assumptions--forecasting)
-6. [Valuation Methodologies (DCF, Monte Carlo, EVA)](#6-valuation-methodologies-dcf-monte-carlo-eva)
+6. [Valuation Methodologies](#6-valuation-methodologies)
 7. [Sensitivity Analysis](#7-sensitivity-analysis)
 8. [Football Field Chart — Valuation Range Summary](#8-football-field-chart--valuation-range-summary)
 9. [Risk Factors](#9-risk-factors)
@@ -34,13 +34,11 @@
 | Market Capitalization | ₹2.48 Lakh Crore (~$29.5 Bn) |
 | Shares Outstanding | 12,480 Mn (1,248 Crore) |
 | 52-Week Range | ₹122 – ₹210 (approx.) |
-| DCF Fair Value (Deterministic) | ₹210–₹214 per share |
-| DCF Monte Carlo (P50 Fair Value) | ₹218 per share |
-| EVA Fair Value (Base Case) | ₹205 per share |
-| Relative Valuation (EV/EBITDA Mid-Cycle) | ₹197 – ₹247 per share |
+| DCF Fair Value (Base Case) | ₹213.50 per share |
+| Relative Valuation (EV/EBITDA) | ₹195 – ₹230 per share |
 | Recommendation | **BUY / ACCUMULATE (Upside: ~8–16%)** |
 
-**Verdict:** Blended valuation across deterministic DCF, Monte Carlo DCF, and EVA indicates Tata Steel is fairly valued to moderately undervalued at ₹198. The central fair value zone is ₹205–₹220 with an upside skew if deleveraging and margin recovery sustain.
+**Verdict:** Tata Steel is fairly valued to marginally undervalued at ₹198. The stock offers ~8–16% upside potential over a 12–18 month horizon under base case assumptions.
 
 ---
 
@@ -203,7 +201,7 @@ ROE = Net Profit Margin × Asset Turnover × Equity Multiplier
 
 ---
 
-## 6. Valuation Methodologies (DCF, Monte Carlo, EVA)
+## 6. Valuation Methodologies
 
 ### A. Discounted Cash Flow (DCF) — FCFF Model
 
@@ -270,92 +268,7 @@ TV = FCFF₂₀₃₀ × (1 + g) / (WACC − g)
 
 ---
 
-
-
-### B. DCF Monte Carlo Simulation (Probabilistic FCFF)
-
-To complement point-estimate DCF, we ran a **10,000-iteration Monte Carlo simulation** varying key value drivers.
-
-#### Simulation Design
-
-| Variable | Distribution | Mean / Base | Range (Approx.) |
-|---|---|---|---|
-| Revenue Growth (FY26–30 CAGR) | Normal | 8.2% | 4.0% to 12.0% |
-| EBITDA Margin (steady-state) | Triangular | 15.0% mode | 12.5% to 17.5% |
-| WACC | Normal | 10.25% | 9.0% to 11.5% |
-| Terminal Growth (g) | Triangular | 4.5% mode | 3.5% to 5.5% |
-| Net Debt FY30 | Normal | ₹70,000 Cr | ₹60,000–₹85,000 Cr |
-
-#### Output Summary (Per Share Fair Value)
-
-| Percentile | Value (₹/share) | Interpretation |
-|---|---|---|
-| P10 | 162 | Stress-case downside |
-| P25 | 188 | Conservative fair value |
-| **P50 (Median)** | **218** | Central estimate |
-| P75 | 248 | Favorable cycle case |
-| P90 | 286 | Strong commodity upcycle |
-| Mean | 221 | Slight right-tail from bullish scenarios |
-| Probability (Value > CMP ₹198.46) | 63% | Positive expected risk-reward |
-
-**Read-through:** Monte Carlo indicates the stock has a **favorable but cyclical payoff profile**. Downside exists in adverse margin/WACC combinations, but the distribution is positively skewed due to operating leverage in mid-cycle to up-cycle conditions.
-
----
-
-### C. EVA Valuation (Economic Value Added)
-
-EVA framework checks whether Tata Steel can generate returns above its capital charge.
-
-#### EVA Formula
-
-```
-EVA = NOPAT − (Invested Capital × WACC)
-```
-
-Where:
-- NOPAT = EBIT × (1 − Tax)
-- Invested Capital = Net Fixed Assets + Working Capital + Other Operating Assets
-
-#### Forecast EVA (₹ Crore)
-
-| Year | NOPAT | Avg Invested Capital | Capital Charge @10.25% | EVA |
-|---|---|---|---|---|
-| FY2026E | 14,517 | 2,18,000 | 22,345 | (7,828) |
-| FY2027E | 17,872 | 2,24,000 | 22,960 | (5,088) |
-| FY2028E | 22,118 | 2,30,500 | 23,626 | (1,508) |
-| FY2029E | 25,546 | 2,35,000 | 24,088 | 1,458 |
-| FY2030E | 27,854 | 2,38,000 | 24,395 | 3,459 |
-
-#### EVA-Based Equity Value Bridge
-
-| Item | ₹ Crore |
-|---|---|
-| Current Invested Capital (FY25) | 2,16,000 |
-| PV of Explicit EVA (FY26–30) | (7,950) |
-| PV of Continuing EVA | 49,500 |
-| **Enterprise Value (EVA Method)** | **2,57,550** |
-| Less: Net Debt + Minority Interest | (87,579) |
-| **Equity Value** | **1,69,971** |
-| Shares Outstanding (Cr) | 1,248 |
-| **EVA Value per Share** | **₹136** |
-
-#### Normalized EVA Adjustment
-
-Because FY26–FY28 contain heavy transition capex and Europe restructuring drag, a normalized mid-cycle ROIC spread approach is also used:
-
-- Normalized ROIC: **11.2%**
-- WACC: **10.25%**
-- Spread: **0.95%**
-- Sustainable EVA capitalized value adds ~₹86/share over adjusted book value.
-
-**Normalized EVA Fair Value: ~₹205/share**
-
-> **Interpretation:** Reported EVA is depressed in near years due to high invested capital and restructuring. Normalized EVA (mid-cycle) converges with DCF outcomes and supports fair value near ₹200+.
-
----
-
-### D. Relative Valuation (Comparable Company Analysis)
-
+### B. Relative Valuation (Comparable Company Analysis)
 
 #### Peer Comparison Table
 
@@ -387,7 +300,7 @@ Because FY26–FY28 contain heavy transition capex and Europe restructuring drag
 
 ---
 
-### E. Dividend Discount Model (DDM)
+### C. Dividend Discount Model (DDM)
 
 | Parameter | Value |
 |---|---|
@@ -420,7 +333,7 @@ PV of TV = 65.91 × 0.4950 = ₹32.63
 
 ---
 
-### F. Asset-Based / Book Value Approach
+### D. Asset-Based / Book Value Approach
 
 | Metric | Value |
 |---|---|
@@ -460,13 +373,11 @@ PV of TV = 65.91 × 0.4950 = ₹32.63
 
 | Method | Bear Case | Base Case | Bull Case |
 |---|---|---|---|
-| DCF (FCFF Deterministic) | ₹172 | ₹210 | ₹276 |
-| DCF Monte Carlo (P25/P50/P75) | ₹188 | ₹218 | ₹248 |
-| EVA (Normalized) | ₹170 | ₹205 | ₹235 |
+| DCF (FCFF) | ₹172 | ₹210 | ₹276 |
 | EV/EBITDA | ₹117–163 | ₹197 | ₹247 |
 | DDM | ₹49 | ₹49 | ₹65 |
 | Book Value / P/B | ₹179 | ₹179–215 | ₹215+ |
-| **BLENDED FAIR VALUE** | **₹170** | **₹205–220** | **₹250–275** |
+| **BLENDED FAIR VALUE** | **₹165** | **₹205–215** | **₹255–275** |
 
 ```
 Valuation Football Field (₹ per share)
@@ -507,7 +418,7 @@ CMP (₹198.46)   │                           ▲
 
 | Parameter | Detail |
 |---|---|
-| **Target Price (12-month)** | **₹210–₹230** |
+| **Target Price (12-month)** | **₹215–₹230** |
 | Current Price | ₹198.46 |
 | Upside Potential | 8%–16% |
 | Downside Risk (Bear) | ~15% (₹170) |
@@ -520,7 +431,7 @@ CMP (₹198.46)   │                           ▲
 | Scenario | Price Target | Key Assumption |
 |---|---|---|
 | **Bull Case (₹250+)** | India steel demand exceeds 10%, European ops turn profitable, coking coal prices decline, faster deleveraging |
-| **Base Case (₹210–230)** | DCF P50 near ₹218, EVA normalized near ₹205, margins improve to 14–15% |
+| **Base Case (₹210–230)** | Revenue growth 7–9%, EBITDA margins improve to 14–15% |
 | **Bear Case (₹165–175)** | Global recession, Chinese dumping intensifies, European losses widen |
 
 ### Why BUY
@@ -568,15 +479,7 @@ WACC = (E/V × Ke) + (D/V × Kd × (1−t))
      = 10.26%
 ```
 
-### Appendix B: Monte Carlo Implementation Notes
-
-- Iterations: 10,000
-- Engine: FCFF-based DCF recalculated each iteration
-- Correlation overlay: mild negative correlation imposed between WACC and terminal growth to avoid unrealistic high-high combinations
-- Winsorization: 1st and 99th percentile trimming for stability
-- Sanity checks: implied EV/EBITDA and ROIC constraints applied to reject non-economic tails
-
-### Appendix C: Key Data Sources
+### Appendix B: Key Data Sources
 
 | Source | Data Used |
 |---|---|
@@ -588,7 +491,7 @@ WACC = (E/V × Ke) + (D/V × Kd × (1−t))
 | Ministry of Steel, India | Demand outlook, installed capacity |
 | Rating Agencies (ICRA, CRISIL) | Debt ratings, covenant details |
 
-### Appendix D: Glossary for MBA Students
+### Appendix C: Glossary for MBA Students
 
 | Term | Definition |
 |---|---|
@@ -602,11 +505,11 @@ WACC = (E/V × Ke) + (D/V × Kd × (1−t))
 | **Football Field Chart** | Visual summary of valuation ranges across multiple methodologies; shows overlap and spread |
 | **DuPont Analysis** | Decomposition of ROE into Profit Margin × Asset Turnover × Equity Multiplier |
 
-### Appendix E: Disclaimer
+### Appendix D: Disclaimer
 
 > **This report is prepared purely for academic purposes as part of a Final Year MBA project. It does not constitute investment advice, solicitation, or a recommendation to buy or sell any security. All financial data, projections, and valuations are based on publicly available information and academic estimates. The author holds no responsibility for investment decisions made based on this report. Investors should conduct their own due diligence and consult a SEBI-registered investment advisor before making any investment decisions.**
 
-### Appendix F: Common MBA Interview / Viva Questions
+### Appendix E: Common MBA Interview / Viva Questions
 
 | # | Question | Quick Answer |
 |---|---|---|
